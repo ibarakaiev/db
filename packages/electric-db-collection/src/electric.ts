@@ -459,6 +459,7 @@ export type AwaitMatchFn<T extends Row<unknown>> = (
 export interface ElectricCollectionUtils<
   T extends Row<unknown> = Row<unknown>,
 > extends UtilsRecord {
+  [key: string]: unknown
   awaitTxId: AwaitTxIdFn
   awaitMatch: AwaitMatchFn<T>
 }
